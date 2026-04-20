@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenida</title>
+    <!-- Incluyendo tipografía moderna: Outfit -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --text-color: #f1f5f9;
+            --accent: #3b82f6;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            /* Degradados sutiles para dar sensación de profundidad */
+            background-image: 
+                radial-gradient(circle at top right, rgba(59, 130, 246, 0.15), transparent 40%), 
+                radial-gradient(circle at bottom left, rgba(139, 92, 246, 0.15), transparent 40%);
+        }
+
+        /* Contenedor central principal */
+        .welcome-container {
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            padding: 3rem;
+            max-width: 850px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .welcome-container h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            /* Texto con un gradiente llamativo */
+            background: linear-gradient(to right, #60a5fa, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+
+        .welcome-container p {
+            font-size: 1.25rem;
+            color: #94a3b8;
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+        }
+
+        /* Envoltura para darle borde redondeado bonito a la imagen */
+        .image-wrapper {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+            position: relative;
+            background: #000;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: contain; /* Para que la IA image encaje perfecto */
+            display: block;
+            transition: transform 0.7s ease;
+            opacity: 0.9;
+        }
+
+        .image-wrapper:hover img {
+            transform: scale(1.03); /* Ligero zoom al pasar el ratón */
+            opacity: 1;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="welcome-container">
+        <h1>¡Bienvenido a mi Panel!</h1>
+        <p>Este es mi espacio de inicio.</p>
+        
+        <div class="image-wrapper">
+            <img src="img/welcome.png" alt="Imagen de Bienvenida">
+        </div>
+    </div>
+
+</body>
+</html>
